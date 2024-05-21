@@ -17,30 +17,31 @@ log() {
 }
 
 
-log $YELLOW "Starting script..."
+log $YELLOW ".........Starting Linux Update"
 apt update && apt upgrade -y
+log $GREEN ".........Completed: Linux update"
 
 
-sleep 1
-log $YELLOW ".........Starting Docker Installation Phase-1..."
+sleep 3
+log $YELLOW ".........Starting Docker Installation Phase-1"
 
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
-log $GREEN "Completed: Docker Installation Phase-1"
+log $GREEN ".........Completed: Docker Installation Phase-1"
 
-sleep 1
+sleep 3
 log $YELLOW ".........Starting Docker installation Phase-2"
 # Add the repository to Apt sources:
-log $GREEN \
+echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && log $GREEN "$VERSION_CODENAME") stable" | \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
-log $GREEN "Completed: Docker Installation Phase-2"
+log $GREEN ".........Completed: Docker Installation Phase-2"
 
 # sleep 1
 # log $YELLOW ".........Adding Doker to Sudoers..."
@@ -49,7 +50,7 @@ log $GREEN "Completed: Docker Installation Phase-2"
 # newgrp docker
 # log $GREEN "Completed: Adding Doker "
 
-sleep 1
-log $GREEN "Running Hello World"
+sleep 3
+log $GREEN "".........Running Hello World"
 
 sudo docker run hello-world
