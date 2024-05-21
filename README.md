@@ -5,3 +5,5 @@ wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/Docke
 chmod 755 docker.sh
 ./docker.sh
 ```
+
+or
