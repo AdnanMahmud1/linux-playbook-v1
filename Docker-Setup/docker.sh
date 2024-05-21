@@ -42,12 +42,12 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 log $GREEN "Completed: Docker Installation Phase-2"
 
-sleep 1
-log $YELLOW ".........Adding Doker to Sudoers..."
-sudo groupadd docker
-sudo usermod -aG docker $USER
-newgrp docker
-log $GREEN "Completed: Adding Doker "
+# sleep 1
+# log $YELLOW ".........Adding Doker to Sudoers..."
+# sudo groupadd docker
+# sudo usermod -aG docker $USER
+# newgrp docker
+# log $GREEN "Completed: Adding Doker "
 
 sleep 1
 log $GREEN "Running Hello World"
