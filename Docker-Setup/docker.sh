@@ -51,6 +51,5 @@ log $GREEN ".........Completed: Docker Installation Phase-2"
 # log $GREEN "Completed: Adding Doker "
 
 sleep 3
-log $GREEN "".........Running Hello World"
-
+log $GREEN ".........Running Hello World"
 sudo docker run hello-world
