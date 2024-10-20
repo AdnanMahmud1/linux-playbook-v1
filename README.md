@@ -39,7 +39,8 @@ wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/termi
 If you want to uninstall **Oh-My-Zsh** and all installed plugins, use the following command:
 
 ```
-wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/terminal/uninstall.sh && chmod 755 uninstall.sh && ./uninstall.sh
+wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/terminal/uninstall.sh && chmod 755
+uninstall.sh && ./uninstall.sh
 ```
 
 ## <span style="color: #27AE60;">Additional Notes</span>
