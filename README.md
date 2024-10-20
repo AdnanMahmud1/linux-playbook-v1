@@ -4,7 +4,7 @@ This repository provides a collection of scripts to set up Docker, Zsh with plug
 
 # <span style="color: #D35400;"> 1. 🐳 Docker Setup</span>
 
-## <span style="color: #D35400;"> 1.1 Docker Installation</span>
+### <span style="color: #D35400;"> 1.1 Docker Installation</span>
 
 To install Docker using the provided script, run the following command:
 
@@ -14,7 +14,7 @@ chmod 755 docker.sh
 ./docker.sh
 ```
 
-## <span style="color: #D35400;"> 1.2 Alternatively (one-liner):</span>
+### <span style="color: #D35400;"> 1.2 Alternatively (one-liner):</span>
 
 ```
 wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/Docker-Setup/docker.sh && chmod 755 docker.sh && ./docker.sh
@@ -36,7 +36,7 @@ wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/Termi
 wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/Terminal/plugins.sh && chmod 755 plugins.sh && ./plugins.sh
 ```
 
-## 2.3 <span style="color: #D35400;"> ❌ Uninstall Zsh and Plugins</span>
+### 2.3 <span style="color: #D35400;"> ❌ Uninstall Zsh and Plugins</span>
 
 If you want to uninstall **Oh-My-Zsh** and all installed plugins, use the following command:
 
