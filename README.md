@@ -21,7 +21,7 @@ wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/termi
 Run the following command to Install Oh My Zsh and install zsh-history-substring-search plugin
 
 ```
-wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/terminal/zsh-font-all.sh && chmod 755 zsh-font-all.sh && ./zsh-font-all.sh
+wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/terminal/zsh-all.sh && chmod 755 zsh-all.sh && ./zsh-all.sh
 ```
 
 Run the following command to Uninstall Oh My Zsh and install zsh-history-substring-search plugin
