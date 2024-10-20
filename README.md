@@ -1,31 +1,25 @@
-Run following command
+# Linux Playbook
 
-```
+This repository provides a collection of scripts to set up Docker, Zsh with plugins, and manage your terminal setup. Follow the steps below to get started.
+
+# Docker Setup
+
 wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/Docker-Setup/docker.sh
 chmod 755 docker.sh
 ./docker.sh
-```
 
-or
+# Alternatively (one-liner):
 
-```
 wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/Docker-Setup/docker.sh && chmod 755 docker.sh && ./docker.sh
-```
 
-Run the following command to Install Oh My Zsh and set it as default shell
+# Zsh Setup - Install Oh My Zsh and Set as Default Shell
 
-```
 wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/terminal/zsh-font.sh && chmod 755 zsh-font.sh && ./zsh-font.sh
-```
 
-Run the following command to Install Oh My Zsh and install zsh-history-substring-search plugin
+# Zsh Setup - Install Oh My Zsh with Plugins
 
-```
 wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/terminal/zsh-all.sh && chmod 755 zsh-all.sh && ./zsh-all.sh
-```
 
-Run the following command to Uninstall Oh My Zsh and install zsh-history-substring-search plugin
+# Uninstall Zsh and Oh My Zsh
 
-```
 wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/terminal/uninstall.sh && chmod 755 uninstall.sh && ./uninstall.sh
-```
