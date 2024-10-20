@@ -20,7 +20,7 @@ wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/Docke
 
 ## <span style="color: #D35400;">Zsh Setup</span>
 
-### Install <span style="color: #E67E22;">Oh My Zsh</span> and Set as Default Shell
+### Install <span style="color: #E67E22;font-style: italic">Oh My Zsh</span> and Set as Default Shell
 
 To install **Oh My Zsh** and set it as your default shell, run the following command:
 
@@ -28,7 +28,7 @@ To install **Oh My Zsh** and set it as your default shell, run the following com
 wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/terminal/zsh-font.sh && chmod 755 zsh-font.sh && ./zsh-font.sh
 ```
 
-### Install <span style="color: #E67E22;">Oh My Zsh</span> with Plugins
+### Install <span style="color: #E67E22;font-style: italic">Oh My Zsh</span> with Plugins
 
 ```
 wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/terminal/zsh-all.sh && chmod 755 zsh-all.sh && ./zsh-all.sh
@@ -36,7 +36,7 @@ wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/termi
 
 ## <span style="color: #D35400;">Uninstall Zsh and Oh My Zsh</span>
 
-If you want to uninstall **Oh My Zsh** and all installed plugins, use the following command:
+If you want to uninstall **Oh-My-Zsh** and all installed plugins, use the following command:
 
 ```
 wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/terminal/uninstall.sh && chmod 755 uninstall.sh && ./uninstall.sh
