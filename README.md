@@ -49,4 +49,7 @@ uninstall.sh && ./uninstall.sh
 
 ### Enhancements Made
 
+- Make sure you have the necessary permissions before running the scripts.
+- These scripts will modify your shell setup, so it’s recommended to back up your `.zshrc` or other configuration files if needed.
+
 You now have a powerful terminal setup with Docker and Zsh configured! For any issues or contributions, please open an issue or a pull request. Enjoy coding! 🎉
