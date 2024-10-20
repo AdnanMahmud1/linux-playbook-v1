@@ -34,4 +34,5 @@ echo "Configuring Zsh to use the plugins..."
 sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search zsh-z)/' ~/.zshrc
 
 # Step 3: Apply changes
-echo "Plugins installed and configured. Please start Zsh by running 'exec zsh' or restart your terminal."
+echo "Plugins installed and configured. Applying changes by restarting the shell..."
+source ~/.zshrc

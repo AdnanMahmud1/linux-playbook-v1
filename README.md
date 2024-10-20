@@ -31,7 +31,7 @@ wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/termi
 ### Install <span style="color: #E67E22;font-style: italic">Oh My Zsh</span> Plugins
 
 ```
-wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/terminal/plugins.sh && chmod 755 plugins.sh && ./plu.sh
+wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/terminal/plugins.sh && chmod 755 plugins.sh && ./plugins.sh
 ```
 
 ## <span style="color: #D35400;">Uninstall Zsh and Oh My Zsh</span>
