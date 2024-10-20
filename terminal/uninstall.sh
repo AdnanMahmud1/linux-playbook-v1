@@ -71,5 +71,6 @@ fi
 echo "Cleaning up..."
 sudo apt autoremove -y
 
-# Step 8: Notify user to restart shell
-echo "Uninstallation complete. Please restart your terminal or run 'exec bash' to start using Bash."
+# Step 8: Reload terminal session
+echo "Restarting terminal session with Bash..."
+exec bash
