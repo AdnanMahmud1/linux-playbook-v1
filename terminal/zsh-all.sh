@@ -46,12 +46,8 @@ echo "Installing Hack font..."
 sudo apt install -y fonts-hack-ttf
 
 # Step 7: Apply changes
-echo "Applying changes by restarting the shell..."
-# This will not work as expected in a script; use 'exec zsh' instead.
-# source ~/.zshrc
+echo "Zsh is installed and configured with popular plugins and Hack font."
 
-# Step 8: Prompt to restart terminal
-echo "Zsh is installed and configured with popular plugins and Hack font. Please restart your terminal or run 'exec zsh' to start using Zsh."
+# Step 8: Prompt to start Zsh
+echo "Please start Zsh by running 'exec zsh' or restart your terminal."
 
-# Optional: Automatically restart into Zsh
-exec zsh
