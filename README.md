@@ -28,10 +28,10 @@ To install **Oh My Zsh** and set it as your default shell, run the following com
 wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/terminal/zsh-font.sh && chmod 755 zsh-font.sh && ./zsh-font.sh
 ```
 
-### Install <span style="color: #E67E22;font-style: italic">Oh My Zsh</span> with Plugins
+### Install <span style="color: #E67E22;font-style: italic">Oh My Zsh</span> Plugins
 
 ```
-wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/terminal/zsh-all.sh && chmod 755 zsh-all.sh && ./zsh-all.sh
+wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/terminal/plugins.sh && chmod 755 plugins.sh && ./plu.sh
 ```
 
 ## <span style="color: #D35400;">Uninstall Zsh and Oh My Zsh</span>
