@@ -9,8 +9,9 @@ sudo apt install -y zsh
 echo "Setting Zsh as the default shell..."
 sudo usermod --shell $(which zsh) $USER
 
-# Step 3: Install Oh My Zsh (to manage Zsh configuration)
-echo "Installing Oh My Zsh..."
+# Step 3: Install Oh My Zsh (without asking for confirmation to switch shell)
+echo "Installing Oh My Zsh without changing shell prompt..."
+export RUNZSH=no
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Step 4: Install zsh-history-substring-search plugin
@@ -29,8 +30,8 @@ sudo apt install -y fonts-hack-ttf
 echo "Applying changes by restarting the shell..."
 source ~/.zshrc
 
-# Step 8: Restarting the terminal message
+# Step 8: Prompt to restart terminal
 echo "Zsh is installed and configured with Hack font. Please restart your terminal or run 'exec zsh' to start using Zsh."
 
-# Optional: If you want to automatically restart to Zsh, you can uncomment the following line.
+# Optional: Automatically restart into Zsh
 # exec zsh
