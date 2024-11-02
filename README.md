@@ -50,8 +50,7 @@ uninstall.sh && ./uninstall.sh
 Installing Portainer, Watchtower, and Docker network, use the following command:
 
 ```
-wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/portainer-watchtower/setup_portainer_watchtower.sh && chmod 755
-setup_portainer_watchtower.sh && ./setup_portainer_watchtower.sh
+wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/portainer-watchtower/setup_portainer_watchtower.sh && chmod 755 setup_portainer_watchtower.sh && ./setup_portainer_watchtower.sh
 ```
 
 ## 4. <span style="color: #27AE60;">🌈 Conclusion</span>
