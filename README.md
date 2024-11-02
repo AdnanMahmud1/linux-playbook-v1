@@ -45,7 +45,16 @@ wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/termi
 uninstall.sh && ./uninstall.sh
 ```
 
-## 3. <span style="color: #27AE60;">🌈 Conclusion</span>
+### 3. <span style="color: #D35400;"> 🐳Portainer and Watchtower container Setup</span>
+
+Installing Portainer, Watchtower, and Docker network, use the following command:
+
+```
+wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/portainer-watchtower/setup_portainer_watchtower.sh && chmod 755
+setup_portainer_watchtower.sh && ./setup_portainer_watchtower.sh
+```
+
+## 4. <span style="color: #27AE60;">🌈 Conclusion</span>
 
 ### Enhancements Made
 
