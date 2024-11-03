@@ -1,0 +1,32 @@
+---
+networks:
+  frontend:
+    external: true # Use an external network
+
+services:
+  portainer:
+    image: portainer/portainer-ce # Specify the Portainer image
+    container_name: portainer # Set the container name
+    ports:
+      - "8000:8000" # Map port 8000
+      - "9000:9000" # Map port 9000
+    restart: always # Set the restart policy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock # Mount the Docker socket
+      - portainer_data:/data # Create a named volume for persistent storage
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portainer.rule=Host(`your domain`) && PathPrefix(`/portainer/`)"
+      - "traefik.http.middlewares.portainerpathstrip.stripprefix.prefixes=/portainer"
+      - "traefik.http.routers.portainer.middlewares=portainerpathstrip@docker"
+      - "traefik.http.routers.portainer.entrypoints=websecure"
+      - "traefik.http.routers.portainer.service=portainer"
+      - "traefik.http.services.portainer.loadbalancer.server.port=9000"
+      - "traefik.http.routers.portainer.tls=true"
+      - "traefik.http.routers.portainer.tls.certresolver=production"
+    networks:
+      - frontend # Connect to the external network
+
+volumes:
+  portainer_data: # Define the named volume
+    driver: local
