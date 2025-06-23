@@ -53,7 +53,21 @@ Installing Portainer, Watchtower, and Docker network, use the following command:
 wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/portainer-watchtower/setup_portainer_watchtower.sh && chmod 755 setup_portainer_watchtower.sh && ./setup_portainer_watchtower.sh
 ```
 
-## 4. <span style="color: #27AE60;">🌈 Conclusion</span>
+## 4. <span style="color: #27AE60;">Proxmox Setup</span>
+
+### 2.1 Install <span style="color: #E67E22;font-style: italic">To fix network issues - Name server </span> 🛠️
+
+```
+wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/proxmox/prox_network.sh && chmod 755 prox_network.sh && ./prox_network.sh
+```
+
+### 2.2 Install <span style="color: #E67E22;font-style: italic">To merge Storage - LVM </span> 🛠️
+
+```
+wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/proxmox/prox_config.sh && chmod 755 prox_config.sh && ./prox_config.sh
+```
+
+## 5. <span style="color: #27AE60;">🌈 Conclusion</span>
 
 ### Enhancements Made
 

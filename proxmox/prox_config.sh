@@ -5,9 +5,6 @@
 
 set -e
 
-echo "Updating DNS configuration..."
-echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf
-
 echo "Removing logical volume /dev/pve/data..."
 sudo lvremove /dev/pve/data -y
 
