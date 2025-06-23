@@ -6,12 +6,12 @@
 set -e
 
 echo "Removing logical volume /dev/pve/data..."
-sudo lvremove /dev/pve/data -y
+lvremove /dev/pve/data -y
 
 echo "Resizing root volume to use all free space..."
-sudo lvresize -l +100%FREE /dev/pve/root
+lvresize -l +100%FREE /dev/pve/root
 
 echo "Resizing filesystem..."
-sudo resize2fs /dev/mapper/pve-root
+resize2fs /dev/mapper/pve-root
 
 echo "Done. Please verify everything is working correctly."
