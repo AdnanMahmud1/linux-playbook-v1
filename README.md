@@ -55,13 +55,13 @@ wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/porta
 
 ## 4. <span style="color: #27AE60;">Proxmox Setup</span>
 
-### 2.1 Install <span style="color: #E67E22;font-style: italic">To fix network issues - Name server </span> 🛠️
+### 4.1 Install <span style="color: #E67E22;font-style: italic">To fix network issues - Name server </span> 🛠️
 
 ```
 wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/proxmox/prox_network.sh && chmod 755 prox_network.sh && ./prox_network.sh
 ```
 
-### 2.2 Install <span style="color: #E67E22;font-style: italic">To merge Storage - LVM </span> 🛠️
+### 4.2 Install <span style="color: #E67E22;font-style: italic">To merge Storage - LVM </span> 🛠️
 
 ```
 wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/proxmox/prox_config.sh && chmod 755 prox_config.sh && ./prox_config.sh
