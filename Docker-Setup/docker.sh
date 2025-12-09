@@ -32,17 +32,28 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 log $GREEN ".........Completed: Docker Installation Phase-1"
 
 sleep 3
+# ----------  Phase-2 (fixed)  ----------
 log $YELLOW ".........Starting Docker installation Phase-2"
-# Add the repository to Apt sources:
+
+# 1. Make sure we have the current OS version string
+. /etc/os-release
+CODENAME=$(lsb_release -cs || echo "$VERSION_CODENAME")
+
+# 2. Add the official Docker repo (forces current codename)
 echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] \
+  https://download.docker.com/linux/ubuntu ${CODENAME} stable" \
+  | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
-log $GREEN ".........Completed: Docker Installation Phase-2"
+# 3. Refresh package list **after** adding the new repo
+sudo apt-get update -y
 
+# 4. Install the latest Docker packages
+sudo apt-get install -y \
+  docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+log $GREEN ".........Completed: Docker installation Phase-2"
+# ---------------------------------------
 # sleep 1
 # log $YELLOW ".........Adding Doker to Sudoers..."
 # sudo groupadd docker
