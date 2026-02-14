@@ -5,7 +5,7 @@ log  ".........Creating Watchtower Docker Container...Step 2"
 docker run -d \
   --name watchtower \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  containrrr/watchtower \
+  nickfedor/watchtower \
   --debug \
   --cleanup \
-  --schedule "*/30 * * * *"
+  --schedule "*/30 * * * * *"
