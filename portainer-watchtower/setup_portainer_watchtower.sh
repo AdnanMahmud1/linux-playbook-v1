@@ -16,10 +16,10 @@ log  ".........Creating Watchtower Docker Container...Step 2"
 docker run -d \
   --name watchtower \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  nickfedor/watchtower:latest \
+  nickfedor/watchtower \
   --debug \
   --cleanup \
-  --schedule "*/30 * * * *"
+  --schedule "*/30 * * * * *"
 
 log  ".........Creating Docker Network...Step 3"
 # Create Docker network
