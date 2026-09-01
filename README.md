@@ -73,6 +73,11 @@ wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/proxm
 ```
 wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/proxmox/prox_config.sh && chmod 755 prox_config.sh && ./prox_config.sh
 ```
+### 4.3 Disable valid subscription nagging (will auto restart the web UI)
+
+```
+sed -Ezi.bak "s/(Ext\.Msg\.show\(\{\s*title: gettext\('No valid sub)/void({ \/\/\1/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js && systemctl restart pveproxy.service
+```
 
 ## 5. <span style="color: #27AE60;">🌈 Conclusion</span>
 
