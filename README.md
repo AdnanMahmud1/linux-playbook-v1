@@ -100,7 +100,49 @@ wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/stora
 - Colors turn off automatically when output is piped or redirected, or when `NO_COLOR` is set.
 - By default, `tmpfs`, `devtmpfs`, `squashfs`, `overlay`, and `efivarfs` are excluded.
 
-## 6. <span style="color: #27AE60;">🌈 Conclusion</span>
+## 6. <span style="color: #27AE60;"> 🧹 Docker Logs</span>
+
+### 6.1 Show log usage and clean container logs
+
+```
+wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/docker-show-clean-logs/docker-show-clean-logs.sh && chmod 755 docker-show-clean-logs.sh && sudo ./docker-show-clean-logs.sh
+```
+
+### 6.2 Clean logs and prune unused Docker data
+
+```
+wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/docker-show-clean-logs/docker-show-clean-logs.sh && chmod 755 docker-show-clean-logs.sh && sudo ./docker-show-clean-logs.sh --prune
+```
+
+### 6.3 <span style="color: #E67E22;font-style: italic"> Notes</span>
+
+- Requires root and Docker.
+- Shows per-container log sizes, `docker system df`, and `/var/lib/docker` usage.
+- Truncates all container logs after a `[y/N]` confirmation.
+- With `--prune`, also removes stopped containers, dangling images, unused networks, and build cache.
+
+## 7. <span style="color: #27AE60;"> 🧹 Server Logs</span>
+
+### 7.1 Show log usage and clean system logs
+
+```
+wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/server-show-clean-logs/server-show-clean-logs.sh && chmod 755 server-show-clean-logs.sh && sudo ./server-show-clean-logs.sh
+```
+
+### 7.2 Change retention (default 7 days)
+
+```
+sudo ./server-show-clean-logs.sh 14
+```
+
+### 7.3 <span style="color: #E67E22;font-style: italic"> Notes</span>
+
+- Requires root.
+- Deletes rotated/compressed logs (`.gz`, `.1`, `.old`) and `*.log` files older than the retention period (default 7 days).
+- Truncates active syslog, auth, kern, and ufw logs, vacuums the systemd journal, and clears the apt package cache.
+- Asks for a `[y/N]` confirmation before making any changes.
+
+## 8. <span style="color: #27AE60;">🌈 Conclusion</span>
 
 ### Enhancements Made
 
