@@ -79,7 +79,28 @@ wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/proxm
 sed -Ezi.bak "s/(Ext\.Msg\.show\(\{\s*title: gettext\('No valid sub)/void({ \/\/\1/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js && systemctl restart pveproxy.service
 ```
 
-## 5. <span style="color: #27AE60;">🌈 Conclusion</span>
+## 5. <span style="color: #2E86C1;"> 💾 Storage Info</span>
+
+### 5.1 Show storage usage (table)
+
+```
+wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/storage_info/storage.sh && chmod 755 storage.sh && ./storage.sh
+```
+
+### 5.2 Show storage usage as progress bars
+
+```
+wget https://raw.githubusercontent.com/AdnanMahmud1/linux-playbook-v1/main/storage_info/storage_bars.sh && chmod 755 storage_bars.sh && ./storage_bars.sh
+```
+
+### 5.3 <span style="color: #E67E22;font-style: italic"> Notes</span>
+
+- Both scripts accept `-a` / `--all` to include every filesystem (for example: `./storage.sh -a`).
+- Usage is color-coded: green below 70%, yellow from 70% to 89%, red at 90% and above.
+- Colors turn off automatically when output is piped or redirected, or when `NO_COLOR` is set.
+- By default, `tmpfs`, `devtmpfs`, `squashfs`, `overlay`, and `efivarfs` are excluded.
+
+## 6. <span style="color: #27AE60;">🌈 Conclusion</span>
 
 ### Enhancements Made
 
